@@ -12,6 +12,17 @@ function preloadInterpolationImages() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var slider = document.getElementById('comparison-slider');
+  var beforeImage = document.querySelector('.comparison-after');
+
+  slider.addEventListener('input', function() {
+    var sliderValue = slider.value;
+    beforeImage.style.width = sliderValue + '%';
+  });
+});
+
+
 function setInterpolationImage(i) {
   var image = interp_images[i];
   image.ondragstart = function() { return false; };
@@ -74,5 +85,7 @@ $(document).ready(function() {
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
+
+	
 
 })
