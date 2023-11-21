@@ -162,61 +162,68 @@ body {
   box-sizing: border-box;
 }
 
-/* Ensure the comparison section is distinct and does not overlap */
 .comparison-section {
   width: 100%;
-  display: block; /* changed from flex to block */
-  margin: 20px auto; /* Add top and bottom margin for spacing */
-  position: relative; /* Ensure this is relative for absolute children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; /* Add padding to ensure it does not touch other sections */
 }
 
 .comparison-container {
   position: relative;
-  width: 80%; /* Adjust this value based on the desired width of the comparison slider on your page */
-  max-width: 800px; /* Set a max-width if needed */
-  margin: 0 auto; /* Center the container */
-  overflow: hidden; /* Hide overflowed parts */
+  width: 80%; /* Adjust based on your preference */
+  max-width: 800px; /* Maximum width of the container */
+  margin: auto; /* Center the container */
+  overflow: hidden; /* Ensure that any overflow is hidden */
 }
 
-/* Ensure the images do not exceed the container's height */
+.comparison-before,
+.comparison-after {
+  position: absolute;
+  width: 100%; /* Take up the full width */
+  top: 0; /* Align to the top of the container */
+  left: 0; /* Align to the left of the container */
+  transition: width 0.5s ease-in-out; /* Smooth transition for the slider */
+}
+
 .comparison-before img,
 .comparison-after img {
-  max-height: 500px; /* Adjust the max-height as needed */
-  width: auto; /* Adjust width automatically to maintain aspect ratio */
-  display: block; /* Remove extra space below the image */
+  width: 100%; /* Ensure the image takes up the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space around the image */
 }
 
-/* Adjust the slider thumb for better visibility */
+.comparison-after {
+  width: var(--slider-value, 50%); /* Use a CSS variable for the width */
+}
+
 .slider {
-  -webkit-appearance: none; /* Override default appearance for WebKit browsers */
-  appearance: none; /* Override default appearance */
-  width: 100%; /* Full width */
-  height: 2px; /* Make the slider line thinner */
-  background: #ddd; /* Slider background */
-  outline: none; /* Remove the outline */
-  opacity: 0.7; /* Slightly transparent */
-  -webkit-transition: opacity .2s; /* Transition for when hovered over */
-  transition: opacity .2s; /* Transition for when hovered over */
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom of the container */
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center the slider */
+  width: 100%; /* Full width of the container */
+  z-index: 2; /* Above the images */
 }
 
-.slider:hover {
-  opacity: 1; /* Fully opaque when hovered over */
-}
-
+/* Custom styles for the slider thumb */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default appearance */
+  -webkit-appearance: none; /* Remove default styling */
   appearance: none;
-  width: 20px; /* Width of the thumb */
-  height: 20px; /* Height of the thumb */
-  background: #4CAF50; /* Green background */
-  cursor: pointer; /* Cursor changes to a pointer when hovering over the thumb */
-  border-radius: 50%; /* Make the thumb round */
+  width: 36px; /* Width of the thumb */
+  height: 36px; /* Height of the thumb */
+  background: #ffffff; /* Thumb background color */
+  cursor: pointer; /* Cursor to indicate it's draggable */
+  border: 2px solid #000; /* Border to make the thumb more visible */
+  border-radius: 50%; /* Round the thumb */
 }
 
 .slider::-moz-range-thumb {
-  width: 20px; /* Width of the thumb */
-  height: 20px; /* Height of the thumb */
-  background: #4CAF50; /* Green background */
-  cursor: pointer; /* Cursor changes to a pointer when hovering over the thumb */
-  border-radius: 50%; /* Make the thumb round */
+  width: 36px; /* Width of the thumb */
+  height: 36px; /* Height of the thumb */
+  background: #ffffff; /* Thumb background color */
+  cursor: pointer; /* Cursor to indicate it's draggable */
+  border: 2px solid #000; /* Border to make the thumb more visible */
+  border-radius: 50%; /* Round the thumb */
 }
