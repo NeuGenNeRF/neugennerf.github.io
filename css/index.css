@@ -335,14 +335,21 @@ body {
   margin-left: -1.5px;
 }
 
+/* Increase the margins between sections */
 .section {
   width: 100%;
+  margin-top: 3rem; /* This increases the top margin of each section */
+  margin-bottom: 3rem; /* This increases the bottom margin of each section */
 }
 
-.top-comparison-set {
-  margin-bottom: 2rem; /* This adds space below the top set of images */
+/* Make all h2 headings bold */
+h2 {
+  font-weight: bold; /* This will make all h2 headings bold */
 }
 
-.bottom-comparison-set {
-  margin-top: 2rem; /* This adds space above the bottom set of images */
+/* Specific class for the visual comparisons heading to match the first image's style */
+.visual-comparisons-heading {
+  font-size: 2em; /* Adjust the size as needed */
+  margin-bottom: 1rem; /* Space below the heading */
+  text-align: center; /* Center the heading if needed */
 }
