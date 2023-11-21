@@ -1,7 +1,6 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
-
 
 .footer .icon-link {
     font-size: 25px;
@@ -18,15 +17,18 @@ body {
 }
 
 
-.teaser .hero-body {
+.teaser .body {
   padding-top: 0;
   padding-bottom: 3rem;
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
+.navbar-inner {
+  height: 280px;  
+}
 
 .publication-title {
 }
@@ -48,11 +50,12 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 .publication-venue {
@@ -80,6 +83,11 @@ body {
 
 .author-block {
   display: inline-block;
+}
+
+.affiliation-logo {
+  display: inline-block;
+  width: 20%
 }
 
 .publication-banner img {
@@ -138,13 +146,6 @@ body {
   border-radius: 5px;
 }
 
-#interpolation-image-wrapper {
-  width: 100%;
-}
-#interpolation-image-wrapper img {
-  border-radius: 5px;
-}
-
 .interpolation-video-column {
 }
 
@@ -156,12 +157,12 @@ body {
   margin: 0 !important;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#interpolation-image-wrapper {
+  width: 100%;
 }
-
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
 .harmonization {
   display: block;
   margin-left: auto;
@@ -335,18 +336,6 @@ body {
   margin-left: -1.5px;
 }
 
-/* Increase the margins between sections */
 .section {
   width: 100%;
-  margin-top: 3rem; /* This increases the top margin of each section */
-  margin-bottom: 3rem; /* This increases the bottom margin of each section */
-}
-
-/* Make all h2 headings bold */
-h2 {
-  font-weight: bold; /* This will make all h2 headings bold */
-}
-
-.image-set {
-  margin-bottom: 50px; /* Adjust the value as needed */
 }
