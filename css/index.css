@@ -155,3 +155,48 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+.comparison-slider {
+  position: relative;
+}
+
+.comparison-before,
+.comparison-after {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.comparison-after {
+  width: var(--slider-value, 50%);
+}
+
+.slider {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  bottom: 10px;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+/* Style for the slider thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
+}
