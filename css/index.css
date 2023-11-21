@@ -155,16 +155,33 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
-.comparison-slider {
+
+.comparison-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.comparison-container {
   position: relative;
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* This centers the container */
 }
 
 .comparison-before,
 .comparison-after {
   position: absolute;
-  width: 100%;
   top: 0;
   transition: width 0.5s ease-in-out;
+  display: block; /* Make sure images are block level to avoid bottom margin */
+}
+
+.comparison-before img,
+.comparison-after img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
 }
 
 .comparison-after {
@@ -175,7 +192,7 @@ body {
   position: absolute;
   z-index: 2;
   width: 100%;
-  bottom: 10px;
+  bottom: 10px; /* Adjust as necessary */
   -webkit-appearance: none;
   outline: none;
 }
