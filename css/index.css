@@ -347,9 +347,6 @@ h2 {
   font-weight: bold; /* This will make all h2 headings bold */
 }
 
-/* Specific class for the visual comparisons heading to match the first image's style */
-.visual-comparisons-heading {
-  font-size: 2em; /* Adjust the size as needed */
-  margin-bottom: 1rem; /* Space below the heading */
-  text-align: center; /* Center the heading if needed */
+.image-set {
+  margin-bottom: 30px; /* Adjust the value as needed */
 }
