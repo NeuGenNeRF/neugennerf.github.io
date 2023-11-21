@@ -338,3 +338,11 @@ body {
 .section {
   width: 100%;
 }
+
+.top-comparison-set {
+  margin-bottom: 2rem; /* This adds space below the top set of images */
+}
+
+.bottom-comparison-set {
+  margin-top: 2rem; /* This adds space above the bottom set of images */
+}
