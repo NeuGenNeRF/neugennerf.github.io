@@ -157,44 +157,45 @@ body {
 }
 
 .comparison-section {
+  width: 100%; /* Full width to contain the comparison container */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Adjust padding as needed */
 }
 
 .comparison-container {
   position: relative;
-  max-width: 800px; /* Adjust width as needed */
-  margin: 0 auto; /* This centers the container */
+  width: 50vw; /* Adjust this value based on the desired width of the comparison slider on your page */
+  max-width: 800px; /* Set a max-width if needed */
+  margin: auto; /* Center the container */
+  overflow: hidden; /* Hide overflowed parts */
 }
 
 .comparison-before,
 .comparison-after {
   position: absolute;
-  top: 0;
+  width: 100%; /* Full width */
+  top: 0; /* Align to the top of the container */
+  left: 0; /* Align to the left of the container */
   transition: width 0.5s ease-in-out;
-  display: block; /* Make sure images are block level to avoid bottom margin */
 }
 
 .comparison-before img,
 .comparison-after img {
-  width: 100%;
+  display: block; /* Remove extra space below the image */
+  width: 100%; /* Full width */
   height: auto; /* Maintain aspect ratio */
-  display: block;
 }
 
 .comparison-after {
-  width: var(--slider-value, 50%);
+  width: 50%; /* Set the initial width to 50% or use a CSS variable */
 }
 
 .slider {
   position: absolute;
-  z-index: 2;
-  width: 100%;
-  bottom: 10px; /* Adjust as necessary */
-  -webkit-appearance: none;
-  outline: none;
+  bottom: 0; /* Align to the bottom of the container */
+  width: 100%; /* Full width */
+  z-index: 2; /* Above the images */
 }
 
 /* Style for the slider thumb */
