@@ -120,12 +120,12 @@
       <h2 class="title is-3">Pipeline</h2>
       <p>
         Our pipeline begins with the original images (denoted as I), which are segmented into patches. 
-        These patches are then sequentially processed through various pipeline layers, as depicted in 
+        These patches are then sequentially processed through NeuGen layers, as depicted in 
         the associated equations. The collective output from all sections of the NeuGen layer is what 
         we refer to as a NeuGen image (In), an idea inspired by the mammalian visual cortex's method of 
-        interpreting scenes. Subsequently, we blend these NeuGen images with the original ones to create 
+        interpreting scenes. Subsequently, we combine these NeuGen images with the original ones to create 
         what we term NeuGen-enhanced images (Ie). This enhancement plays a crucial role in improving feature 
-        extraction, which is vital for the input to Neural Radiance Fields (NeRF). The diagram's right side 
+        extraction, which is vital for the input to Neural Radiance Fields (NeRF) models. The diagram's right side 
         illustrates the volumetric rendering step, a critical component common to all NeRF methodologies, 
         including well-known ones like MVSNeRF and GeoNeRF. It's important to recognize that while this 
         process is fundamental, the specific details and feature volume implementations are uniquely 
@@ -427,7 +427,32 @@
     <!-- The slider input -->
 <!--     <input type="range" min="0" max="100" value="50" class="slider" id="comparison-slider">
   </div>
-</section> --> -->
+</section> -->
+  
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@misc{chen2021mvsnerf,
+  title={MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo}, 
+  author={Anpei Chen and Zexiang Xu and Fuqiang Zhao and Xiaoshuai Zhang and Fanbo Xiang and Jingyi Yu and Hao Su},
+  year={2021},
+  eprint={2103.15595},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
+
+@misc{johari2022geonerf,
+  title={GeoNeRF: Generalizing NeRF with Geometry Priors}, 
+  author={Mohammad Mahdi Johari and Yann Lepoittevin and François Fleuret},
+  year={2022},
+  eprint={2111.13539},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
+    </code></pre>
+  </div>
+</section>
 
 
 <footer class="footer">
