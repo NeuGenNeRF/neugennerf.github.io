@@ -119,21 +119,19 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Pipeline</h2>
       <img src="./images/Ffigure1.png" class="pipeline" />
-<!--       <p>
-        Our approach consists of two phases: 3D Gaussian splatting reconstruction
-        and physics-integrated novel motion synthesis. The first phase is mainly adopted from the original GS framework,
-        which reconstructs a set of 3D Gaussian kernels renderable by point
-        splatting process, from a set of multi-view images, associated camera information, and an optional initial
-        sparse surface point cloud constructed by COLMAP. We
-        additionally regularize this reconstruction process with an anisotropic loss term if needed to avoid over-skinny
-        Gaussian kernels.
-        The second phase directly views the Gaussian ellipsoids as the simulatable particle discretization of the scene
-        for MPM simulation. Enabled by MPM solver for continuum mechanics and our
-        novel kinematics for Gaussian kernels and spherical harmonics, the scene can undergo physics-aware deformations
-        and maintain photo-realistic rendering
-        quality simultaneously and seamlessly. For better physics compliance, we also perform Gaussian kernel internal
-        filling to capture the internal deformation of the object as needed.
-      </p> -->
+      <p>
+        Our pipeline begins with the original images (denoted as I), which are segmented into patches. 
+        These patches are then sequentially processed through various pipeline layers, as depicted in 
+        the associated equations. The collective output from all sections of the NeuGen layer is what 
+        we refer to as a NeuGen image (In), an idea inspired by the mammalian visual cortex's method of 
+        interpreting scenes. Subsequently, we blend these NeuGen images with the original ones to create 
+        what we term NeuGen-enhanced images (Ie). This enhancement plays a crucial role in improving feature 
+        extraction, which is vital for the input to Neural Radiance Fields (NeRF). The diagram's right side 
+        illustrates the volumetric rendering step, a critical component common to all NeRF methodologies, 
+        including well-known ones like MVSNeRF and GeoNeRF. It's important to recognize that while this 
+        process is fundamental, the specific details and feature volume implementations are uniquely 
+        adapted in each architecture to suit their distinct requirements.
+      </p>
     </div>
   </section> 
   
