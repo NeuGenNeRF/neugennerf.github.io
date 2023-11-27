@@ -340,8 +340,15 @@ body {
   width: 100%;
 }
 
+/* .full-size-image {
+  width: 100%; /* Makes the image fill the width of its container */
+/*   height: auto; /* Adjusts the height while maintaining the aspect ratio */
+/*   display: block; /* Ensures the image is a block-level element */
+/* } */
+
 .full-size-image {
   width: 100%; /* Makes the image fill the width of its container */
   height: auto; /* Adjusts the height while maintaining the aspect ratio */
   display: block; /* Ensures the image is a block-level element */
+  object-fit: contain; /* Ensures that the entire image fits within its container without cropping */
 }
