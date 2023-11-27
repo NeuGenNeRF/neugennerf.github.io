@@ -258,6 +258,7 @@ body {
   pointer-events: none;
   border-radius: 0.2rem;
   padding: 2px 10px;
+  z-index: 21;
 }
 
 .bal-afterPosition {
@@ -267,6 +268,7 @@ body {
   pointer-events: none;
   border-radius: 0.2rem;
   padding: 2px 10px;
+  z-index: 21;
 }
 
 .beforeLabel {
