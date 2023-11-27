@@ -30,7 +30,7 @@ class BeforeAfter {
                     let newWidth = modifiedCurrentPoint * 100 / containerWidth;
 
                     before.setAttribute('style', "width:" + newWidth + "%;");
-                    // afterText.setAttribute('style', "z-index: 1;");
+                    afterText.setAttribute('style', "z-index: 1;");
                     handle.setAttribute('style', "left:" + newWidth + "%;");
                 }
             });
@@ -44,7 +44,7 @@ class BeforeAfter {
 
             if (e.offsetX > 10 && e.offsetX < beforeAfterContainer.offsetWidth - 10) {
                 before.setAttribute('style', "width:" + newWidth + "%;");
-                // afterText.setAttribute('style', "z-index:" + "1;");
+                afterText.setAttribute('style', "z-index:" + "1;");
                 handle.setAttribute('style', "left:" + newWidth + "%;");
             }
         })
